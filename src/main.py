@@ -1,5 +1,6 @@
 from random import randint
 
+numbers_guessed = []
 number_to_guess = randint(0,50)
 
 def error_handling(prompt):
@@ -13,6 +14,7 @@ def error_handling(prompt):
 def guess_number():
     while True:
         num = error_handling('What number do you think it is? ')
+        numbers_guessed.append(num)
         if num == number_to_guess:
             print('Correct!!!!!!! :)' )
             return
